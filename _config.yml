@@ -1,0 +1,5 @@
+title: Thahiti's Blog
+description: 개발 기록과 생각 정리
+theme: minima
+plugins:
+  - jekyll-feed
