@@ -3,7 +3,7 @@ layout: post
 title: "GPT-2로 시작하는 LLM의 원리 탐구 — 학습 리소스 총정리"
 date: 2026-04-03 14:00:00 +0900
 categories:
-  - Deep Learning
+  - AI
 tags:
   - llm
   - gpt-2

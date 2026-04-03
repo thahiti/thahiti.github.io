@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "[딥러닝] 미니 배치 업데이트는 똑같은데, 컨티뉴얼 러닝은 왜 유독 어렵다고 할까?"
+title: "미니 배치 업데이트는 똑같은데, 컨티뉴얼 러닝은 왜 유독 어렵다고 할까?"
 date: 2026-04-03 13:00:00 +0900
 categories:
-  - Deep Learning
+  - AI
 tags:
   - continual-learning
   - catastrophic-forgetting

@@ -3,7 +3,7 @@ layout: post
 title: "AI 친화적 콘텐츠 작성 가이드: 검색과 이해를 최적화하는 글쓰기 원칙"
 date: 2026-04-03 12:00:00 +0900
 categories:
-  - Writing
+  - AI
 tags:
   - ai
   - seo
