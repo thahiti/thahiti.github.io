@@ -10,6 +10,7 @@ tags:
   - gradient-interference
   - stability-plasticity
 math: true
+last_modified_at: 2026-04-03 17:59:00 +0900
 ---
 
 딥러닝을 공부하거나 직접 모델을 다루다 보면 한 번쯤 이런 합리적인 의문이 들 수 있습니다.

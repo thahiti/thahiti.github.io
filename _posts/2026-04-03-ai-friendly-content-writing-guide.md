@@ -11,6 +11,7 @@ tags:
   - content-writing
 robots: noindex, nofollow
 media_subpath: /assets/img/posts/ai-friendly-content-writing-guide/
+last_modified_at: 2026-04-06 21:33:00 +0900
 ---
 
 웹과 문서 생태계의 패러다임이 바뀌고 있습니다. 예전에는 검색 엔진에 키워드를 입력하면 그 키워드가 많이 들어간 문서 링크가 쭉 나열되는 방식이었습니다. 콘텐츠 작성자들도 SEO를 위해 메타 태그를 조작하거나 특정 단어를 반복하는 기계적인 작업에 집중했습니다. 하지만 대형 언어 모델(LLM)과 검색 증강 생성(RAG, Retrieval-Augmented Generation)이 결합된 '생성형 AI 검색' 시대가 열리면서, 정보를 찾고 소비하는 방식 자체가 달라지고 있습니다.

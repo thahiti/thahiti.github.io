@@ -9,6 +9,7 @@ tags:
   - gpt-2
   - transformer
   - study-resources
+last_modified_at: 2026-04-03 17:59:00 +0900
 ---
 
 LLM을 다루다 보면 한 번쯤 이런 생각이 들 수 있습니다.
