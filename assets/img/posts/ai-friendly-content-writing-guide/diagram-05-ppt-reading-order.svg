@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" font-family="'Pretendard', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc"/>
+      <stop offset="100%" style="stop-color:#eef2f7"/>
+    </linearGradient>
+    <filter id="sh5" x="-3%" y="-3%" width="106%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="480" fill="url(#bg5)" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="36" text-anchor="middle" font-size="17" font-weight="700" fill="#1e293b">PPT 슬라이드의 시각적 배치 vs AI 실제 읽기 순서</text>
+
+  <!-- Divider -->
+  <line x1="450" y1="50" x2="450" y2="450" stroke="#e2e8f0" stroke-width="1.5" stroke-dasharray="8,4"/>
+
+  <!-- ===== LEFT: Visual Layout ===== -->
+  <text x="225" y="68" text-anchor="middle" font-size="14" font-weight="700" fill="#6366f1">&#x1F441; 사람이 보는 슬라이드</text>
+
+  <!-- Slide frame -->
+  <g filter="url(#sh5)">
+    <rect x="40" y="85" width="370" height="260" rx="6" fill="#fff" stroke="#c7d2fe" stroke-width="2"/>
+  </g>
+
+  <!-- Title box (visually at top) -->
+  <rect x="60" y="100" width="330" height="40" rx="4" fill="#eef2ff" stroke="#a5b4fc" stroke-width="1"/>
+  <text x="225" y="125" text-anchor="middle" font-size="14" font-weight="700" fill="#4338ca">Redis 캐시 적용 후 응답 시간 87% 감소</text>
+
+  <!-- Chart (visually center-left) -->
+  <rect x="60" y="155" width="180" height="120" rx="4" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+  <text x="150" y="195" text-anchor="middle" font-size="28">&#x1F4C8;</text>
+  <text x="150" y="220" text-anchor="middle" font-size="10" fill="#64748b">[응답 시간 그래프]</text>
+  <text x="150" y="235" text-anchor="middle" font-size="9" fill="#94a3b8">텍스트 상자 A</text>
+  <text x="150" y="265" text-anchor="middle" font-size="10" fill="#16a34a">삽입 순서: 3번째</text>
+
+  <!-- Key metrics (visually right) -->
+  <rect x="255" y="155" width="135" height="55" rx="4" fill="#fff7ed" stroke="#fdba74" stroke-width="1"/>
+  <text x="322" y="175" text-anchor="middle" font-size="11" font-weight="600" fill="#c2410c">핵심 수치</text>
+  <text x="322" y="192" text-anchor="middle" font-size="10" fill="#7c2d12">응답 시간: 320ms&#x2192;45ms</text>
+  <text x="322" y="203" text-anchor="middle" font-size="10" fill="#c2410c">삽입 순서: 1번째</text>
+
+  <!-- Source note (visually bottom-right) -->
+  <rect x="255" y="225" width="135" height="50" rx="4" fill="#fdf4ff" stroke="#d8b4fe" stroke-width="1"/>
+  <text x="322" y="245" text-anchor="middle" font-size="10" fill="#7e22ce">출처: 프로덕션 데이터</text>
+  <text x="322" y="258" text-anchor="middle" font-size="10" fill="#7e22ce">2024.11~2025.01</text>
+  <text x="322" y="270" text-anchor="middle" font-size="10" fill="#7e22ce">삽입 순서: 2번째</text>
+
+  <!-- Visual reading order arrows (what humans see) -->
+  <text x="225" y="358" text-anchor="middle" font-size="12" fill="#6366f1" font-weight="600">사람의 시선 흐름:</text>
+  <text x="225" y="378" text-anchor="middle" font-size="11" fill="#4f46e5">제목 &#x2192; 그래프 &#x2192; 핵심 수치 &#x2192; 출처</text>
+  <text x="225" y="398" text-anchor="middle" font-size="11" fill="#64748b">(위&#x2192;아래, 좌&#x2192;우 순서로 자연스럽게 읽음)</text>
+
+  <!-- ===== RIGHT: AI Reading Order ===== -->
+  <text x="675" y="68" text-anchor="middle" font-size="14" font-weight="700" fill="#dc2626">&#x1F916; AI가 실제로 읽는 순서</text>
+
+  <!-- AI reading sequence -->
+  <g filter="url(#sh5)">
+    <rect x="480" y="85" width="390" height="260" rx="6" fill="#fff" stroke="#fecaca" stroke-width="2"/>
+  </g>
+
+  <!-- Step 1: Key metrics (inserted first) -->
+  <rect x="500" y="100" width="40" height="26" rx="13" fill="#dc2626"/>
+  <text x="520" y="118" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">1</text>
+  <rect x="550" y="97" width="300" height="32" rx="4" fill="#fff7ed" stroke="#fdba74" stroke-width="1.5"/>
+  <text x="565" y="117" font-size="11" fill="#c2410c">&#x1F4CA; "핵심 수치: 응답 시간 320ms&#x2192;45ms"</text>
+
+  <!-- Step 2: Source note (inserted second) -->
+  <rect x="500" y="145" width="40" height="26" rx="13" fill="#dc2626"/>
+  <text x="520" y="163" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">2</text>
+  <rect x="550" y="142" width="300" height="32" rx="4" fill="#fdf4ff" stroke="#d8b4fe" stroke-width="1.5"/>
+  <text x="565" y="162" font-size="11" fill="#7e22ce">&#x1F4C5; "출처: 프로덕션 데이터 2024.11~2025.01"</text>
+
+  <!-- Step 3: Chart (inserted third) -->
+  <rect x="500" y="190" width="40" height="26" rx="13" fill="#dc2626"/>
+  <text x="520" y="208" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">3</text>
+  <rect x="550" y="187" width="300" height="32" rx="4" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+  <text x="565" y="207" font-size="11" fill="#15803d">&#x1F4C8; [응답 시간 비교 그래프 이미지]</text>
+
+  <!-- Step 4: Title (inserted last - via master) -->
+  <rect x="500" y="235" width="40" height="26" rx="13" fill="#dc2626"/>
+  <text x="520" y="253" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">4</text>
+  <rect x="550" y="232" width="300" height="32" rx="4" fill="#eef2ff" stroke="#a5b4fc" stroke-width="1.5"/>
+  <text x="565" y="252" font-size="11" fill="#4338ca">&#x1F3F7; "Redis 캐시 적용 후 응답 시간 87% 감소"</text>
+
+  <!-- Explanation -->
+  <text x="675" y="288" text-anchor="middle" font-size="10" fill="#64748b">* 읽기 순서 = 객체가 삽입된 순서 (시각적 위치 무관)</text>
+
+  <!-- Problem callout -->
+  <g filter="url(#sh5)">
+    <rect x="480" y="305" width="390" height="40" rx="6" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
+  </g>
+  <text x="500" y="330" font-size="11" fill="#7f1d1d">&#x26A0; AI가 수치를 먼저 읽고, 제목(맥락)을 마지막에 읽어 문맥 파악이 어려움</text>
+
+  <!-- Solution -->
+  <g filter="url(#sh5)">
+    <rect x="40" y="415" width="820" height="50" rx="8" fill="#ecfdf5" stroke="#10b981" stroke-width="1.5"/>
+  </g>
+  <text x="450" y="438" text-anchor="middle" font-size="13" font-weight="700" fill="#047857">&#x1F4A1; 해결 방법</text>
+  <text x="450" y="456" text-anchor="middle" font-size="11" fill="#14532d">[검토] &#x2192; [접근성 확인] &#x2192; [읽기 순서 창]에서 객체 순서를 제목 &#x2192; 그래프 &#x2192; 수치 &#x2192; 출처 순으로 교정하세요.</text>
+
+  <!-- Bottom caption -->
+  <text x="450" y="475" text-anchor="middle" font-size="10" fill="#94a3b8">슬라이드 마스터의 기본 플레이스홀더를 사용하면 읽기 순서가 자동으로 올바르게 설정됩니다.</text>
+</svg>

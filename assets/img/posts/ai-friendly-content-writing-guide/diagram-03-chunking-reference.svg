@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="'Pretendard', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc"/>
+      <stop offset="100%" style="stop-color:#eef2f7"/>
+    </linearGradient>
+    <filter id="sh3" x="-3%" y="-3%" width="106%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="520" fill="url(#bg3)" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="36" text-anchor="middle" font-size="17" font-weight="700" fill="#1e293b">청킹(Chunking) 시 참조 추적: 위치 표현 vs 고유번호</text>
+
+  <!-- LEFT SIDE: Bad example -->
+  <text x="225" y="68" text-anchor="middle" font-size="14" font-weight="700" fill="#dc2626">&#x274C; "아래 그림" (위치 기반 참조)</text>
+
+  <!-- Original document (left) -->
+  <g filter="url(#sh3)">
+    <rect x="30" y="85" width="390" height="160" rx="8" fill="#fff" stroke="#e2e8f0" stroke-width="1.5"/>
+  </g>
+  <text x="45" y="105" font-size="11" font-weight="600" fill="#64748b">원본 문서</text>
+
+  <!-- Chunk A -->
+  <rect x="45" y="115" width="360" height="35" rx="5" fill="#fef2f2" stroke="#fca5a5" stroke-width="1"/>
+  <text x="55" y="137" font-size="11" fill="#991b1b">Chunk A: "...캐시 적용 후 성능이 개선되었습니다.</text>
+  <text x="305" y="137" font-size="11" font-weight="700" fill="#dc2626">아래 그림</text>
+  <text x="368" y="137" font-size="11" fill="#991b1b">참조"</text>
+
+  <!-- Chunk B -->
+  <rect x="45" y="158" width="360" height="35" rx="5" fill="#fef2f2" stroke="#fca5a5" stroke-width="1"/>
+  <text x="55" y="174" font-size="22">&#x1F4CA;</text>
+  <text x="85" y="180" font-size="11" fill="#991b1b">Chunk B: [응답 시간 비교 그래프 이미지]</text>
+
+  <!-- Chunk C -->
+  <rect x="45" y="201" width="360" height="28" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="55" y="220" font-size="11" fill="#475569">Chunk C: "이러한 성능 개선은 이탈률에도..."</text>
+
+  <!-- Arrow: chunking -->
+  <text x="225" y="265" text-anchor="middle" font-size="12" fill="#94a3b8">&#x2193; 청킹으로 분리 &#x2193;</text>
+
+  <!-- Separated chunks (left) -->
+  <g filter="url(#sh3)">
+    <rect x="30" y="280" width="180" height="70" rx="8" fill="#fef2f2" stroke="#f87171" stroke-width="2"/>
+  </g>
+  <text x="45" y="300" font-size="10" font-weight="600" fill="#dc2626">Chunk A (벡터 DB)</text>
+  <text x="45" y="318" font-size="10" fill="#7f1d1d">"...성능이 개선되었습니다.</text>
+  <text x="45" y="333" font-size="10" font-weight="700" fill="#dc2626">아래 그림 참조"</text>
+
+  <g filter="url(#sh3)">
+    <rect x="240" y="280" width="180" height="70" rx="8" fill="#fef2f2" stroke="#f87171" stroke-width="2"/>
+  </g>
+  <text x="255" y="300" font-size="10" font-weight="600" fill="#dc2626">Chunk B (벡터 DB)</text>
+  <text x="270" y="322" font-size="22">&#x1F4CA;</text>
+  <text x="300" y="327" font-size="10" fill="#7f1d1d">[그래프 이미지]</text>
+
+  <!-- Broken link -->
+  <line x1="210" y1="315" x2="240" y2="315" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="6,4"/>
+  <text x="225" y="308" text-anchor="middle" font-size="16" fill="#ef4444">&#x26A0;</text>
+
+  <!-- Result box (left) -->
+  <g filter="url(#sh3)">
+    <rect x="30" y="375" width="390" height="55" rx="8" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
+  </g>
+  <text x="50" y="398" font-size="12" font-weight="600" fill="#dc2626">&#x1F916; AI 판단:</text>
+  <text x="145" y="398" font-size="11" fill="#7f1d1d">"아래 그림"이 뭔지 모르겠음 &#x2192; 참조 대상 유실</text>
+  <text x="50" y="418" font-size="11" fill="#7f1d1d">&#x2192; 그래프 데이터를 답변에 포함하지 못하거나 잘못된 정보 생성</text>
+
+  <!-- RIGHT SIDE: Good example -->
+  <text x="675" y="68" text-anchor="middle" font-size="14" font-weight="700" fill="#059669">&#x2714; "그림 1" (고유번호 참조)</text>
+
+  <!-- Original document (right) -->
+  <g filter="url(#sh3)">
+    <rect x="480" y="85" width="390" height="160" rx="8" fill="#fff" stroke="#e2e8f0" stroke-width="1.5"/>
+  </g>
+  <text x="495" y="105" font-size="11" font-weight="600" fill="#64748b">원본 문서</text>
+
+  <!-- Chunk A -->
+  <rect x="495" y="115" width="360" height="35" rx="5" fill="#ecfdf5" stroke="#86efac" stroke-width="1"/>
+  <text x="505" y="137" font-size="11" fill="#14532d">"...캐시 적용 후 성능이 개선되었습니다.</text>
+  <text x="758" y="137" font-size="11" font-weight="700" fill="#059669">그림 1</text>
+  <text x="795" y="137" font-size="11" fill="#14532d">참조"</text>
+
+  <!-- Chunk B -->
+  <rect x="495" y="158" width="360" height="35" rx="5" fill="#ecfdf5" stroke="#86efac" stroke-width="1"/>
+  <text x="505" y="174" font-size="22">&#x1F4CA;</text>
+  <text x="535" y="180" font-size="11" fill="#14532d">[</text>
+  <text x="542" y="180" font-size="11" font-weight="700" fill="#059669">그림 1.</text>
+  <text x="585" y="180" font-size="11" fill="#14532d">응답 시간 비교 그래프]</text>
+
+  <!-- Chunk C -->
+  <rect x="495" y="201" width="360" height="28" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="505" y="220" font-size="11" fill="#475569">"이러한 성능 개선은 이탈률에도..."</text>
+
+  <!-- Arrow: chunking -->
+  <text x="675" y="265" text-anchor="middle" font-size="12" fill="#94a3b8">&#x2193; 청킹으로 분리 &#x2193;</text>
+
+  <!-- Separated chunks (right) -->
+  <g filter="url(#sh3)">
+    <rect x="480" y="280" width="180" height="70" rx="8" fill="#ecfdf5" stroke="#34d399" stroke-width="2"/>
+  </g>
+  <text x="495" y="300" font-size="10" font-weight="600" fill="#059669">Chunk A (벡터 DB)</text>
+  <text x="495" y="318" font-size="10" fill="#14532d">"...성능이 개선되었습니다.</text>
+  <text x="495" y="333" font-size="10" fill="#14532d"><tspan font-weight="700" fill="#059669">그림 1</tspan> 참조"</text>
+
+  <g filter="url(#sh3)">
+    <rect x="690" y="280" width="180" height="70" rx="8" fill="#ecfdf5" stroke="#34d399" stroke-width="2"/>
+  </g>
+  <text x="705" y="300" font-size="10" font-weight="600" fill="#059669">Chunk B (벡터 DB)</text>
+  <text x="720" y="322" font-size="22">&#x1F4CA;</text>
+  <text x="750" y="327" font-size="10" fill="#14532d"><tspan font-weight="700" fill="#059669">그림 1.</tspan> [그래프]</text>
+
+  <!-- Connected link -->
+  <line x1="660" y1="315" x2="690" y2="315" stroke="#10b981" stroke-width="2.5"/>
+  <text x="675" y="308" text-anchor="middle" font-size="16" fill="#10b981">&#x1F517;</text>
+
+  <!-- Result box (right) -->
+  <g filter="url(#sh3)">
+    <rect x="480" y="375" width="390" height="55" rx="8" fill="#ecfdf5" stroke="#10b981" stroke-width="1.5"/>
+  </g>
+  <text x="500" y="398" font-size="12" font-weight="600" fill="#059669">&#x1F916; AI 판단:</text>
+  <text x="595" y="398" font-size="11" fill="#14532d">"그림 1" 토큰으로 두 Chunk 연결 성공!</text>
+  <text x="500" y="418" font-size="11" fill="#14532d">&#x2192; 그래프 데이터를 정확히 인용하여 답변에 포함</text>
+
+  <!-- Bottom caption -->
+  <text x="450" y="465" text-anchor="middle" font-size="11" fill="#64748b">문서가 Chunk 단위로 분리되면 "아래/위" 같은 위치 표현은 참조 대상을 잃습니다.</text>
+  <text x="450" y="482" text-anchor="middle" font-size="11" fill="#64748b">"그림 1" 같은 고유번호를 사용하면 Chunk가 분리되어도 AI가 논리적 연결을 추적할 수 있습니다.</text>
+
+  <!-- Divider -->
+  <line x1="450" y1="55" x2="450" y2="440" stroke="#e2e8f0" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <text x="450" y="500" text-anchor="middle" font-size="10" fill="#94a3b8">vs</text>
+</svg>

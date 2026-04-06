@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" font-family="'Pretendard', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc"/>
+      <stop offset="100%" style="stop-color:#eef2f7"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="420" fill="url(#bg)" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="17" font-weight="700" fill="#1e293b">RAG 기반 AI 검색이 문서를 처리하는 과정</text>
+
+  <!-- Step 1: Document -->
+  <g filter="url(#shadow)">
+    <rect x="30" y="70" width="140" height="100" rx="10" fill="#fff" stroke="#3b82f6" stroke-width="2"/>
+  </g>
+  <text x="100" y="105" text-anchor="middle" font-size="28">&#x1F4C4;</text>
+  <text x="100" y="130" text-anchor="middle" font-size="13" font-weight="600" fill="#1e40af">원본 문서</text>
+  <text x="100" y="148" text-anchor="middle" font-size="10" fill="#64748b">블로그, PDF,</text>
+  <text x="100" y="161" text-anchor="middle" font-size="10" fill="#64748b">Word, PPT</text>
+
+  <!-- Arrow 1 -->
+  <line x1="170" y1="120" x2="200" y2="120" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Step 2: Chunking -->
+  <g filter="url(#shadow)">
+    <rect x="205" y="70" width="140" height="100" rx="10" fill="#fff" stroke="#8b5cf6" stroke-width="2"/>
+  </g>
+  <text x="275" y="105" text-anchor="middle" font-size="28">&#x2702;&#xFE0F;</text>
+  <text x="275" y="130" text-anchor="middle" font-size="13" font-weight="600" fill="#6d28d9">청킹(Chunking)</text>
+  <text x="275" y="148" text-anchor="middle" font-size="10" fill="#64748b">문서를 의미 단위의</text>
+  <text x="275" y="161" text-anchor="middle" font-size="10" fill="#64748b">작은 조각으로 분할</text>
+
+  <!-- Arrow 2 -->
+  <line x1="345" y1="120" x2="375" y2="120" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Step 3: Embedding -->
+  <g filter="url(#shadow)">
+    <rect x="380" y="70" width="140" height="100" rx="10" fill="#fff" stroke="#06b6d4" stroke-width="2"/>
+  </g>
+  <text x="450" y="105" text-anchor="middle" font-size="28">&#x1F9EE;</text>
+  <text x="450" y="130" text-anchor="middle" font-size="13" font-weight="600" fill="#0e7490">임베딩(Embedding)</text>
+  <text x="450" y="148" text-anchor="middle" font-size="10" fill="#64748b">텍스트 조각을</text>
+  <text x="450" y="161" text-anchor="middle" font-size="10" fill="#64748b">수치 벡터로 변환</text>
+
+  <!-- Arrow 3 -->
+  <line x1="520" y1="120" x2="550" y2="120" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Step 4: Vector DB -->
+  <g filter="url(#shadow)">
+    <rect x="555" y="70" width="140" height="100" rx="10" fill="#fff" stroke="#f59e0b" stroke-width="2"/>
+  </g>
+  <text x="625" y="105" text-anchor="middle" font-size="28">&#x1F5C4;&#xFE0F;</text>
+  <text x="625" y="130" text-anchor="middle" font-size="13" font-weight="600" fill="#b45309">벡터 DB 저장</text>
+  <text x="625" y="148" text-anchor="middle" font-size="10" fill="#64748b">유사도 검색이 가능한</text>
+  <text x="625" y="161" text-anchor="middle" font-size="10" fill="#64748b">데이터베이스에 저장</text>
+
+  <!-- Bottom Row -->
+  <!-- Step 5: User Query -->
+  <g filter="url(#shadow)">
+    <rect x="30" y="240" width="140" height="100" rx="10" fill="#fff" stroke="#10b981" stroke-width="2"/>
+  </g>
+  <text x="100" y="275" text-anchor="middle" font-size="28">&#x1F464;</text>
+  <text x="100" y="300" text-anchor="middle" font-size="13" font-weight="600" fill="#047857">사용자 질문</text>
+  <text x="100" y="318" text-anchor="middle" font-size="10" fill="#64748b">"Docker가 뭐야?"</text>
+  <text x="100" y="331" text-anchor="middle" font-size="10" fill="#64748b">자연어 질문 입력</text>
+
+  <!-- Arrow 4 -->
+  <line x1="170" y1="290" x2="200" y2="290" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Step 6: Retrieval -->
+  <g filter="url(#shadow)">
+    <rect x="205" y="240" width="140" height="100" rx="10" fill="#fff" stroke="#f59e0b" stroke-width="2"/>
+  </g>
+  <text x="275" y="275" text-anchor="middle" font-size="28">&#x1F50D;</text>
+  <text x="275" y="300" text-anchor="middle" font-size="13" font-weight="600" fill="#b45309">검색(Retrieval)</text>
+  <text x="275" y="318" text-anchor="middle" font-size="10" fill="#64748b">질문과 유사한</text>
+  <text x="275" y="331" text-anchor="middle" font-size="10" fill="#64748b">벡터 조각을 검색</text>
+
+  <!-- Dotted line from Vector DB to Retrieval -->
+  <line x1="625" y1="170" x2="625" y2="210" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="625" y1="210" x2="275" y2="210" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="275" y1="210" x2="275" y2="240" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowOrange)"/>
+
+  <!-- Arrow 5 -->
+  <line x1="345" y1="290" x2="375" y2="290" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Step 7: LLM Generation -->
+  <g filter="url(#shadow)">
+    <rect x="380" y="240" width="140" height="100" rx="10" fill="#fff" stroke="#8b5cf6" stroke-width="2"/>
+  </g>
+  <text x="450" y="275" text-anchor="middle" font-size="28">&#x1F916;</text>
+  <text x="450" y="300" text-anchor="middle" font-size="13" font-weight="600" fill="#6d28d9">LLM 답변 생성</text>
+  <text x="450" y="318" text-anchor="middle" font-size="10" fill="#64748b">검색된 조각을 기반으로</text>
+  <text x="450" y="331" text-anchor="middle" font-size="10" fill="#64748b">종합적인 답변 작성</text>
+
+  <!-- Arrow 6 -->
+  <line x1="520" y1="290" x2="550" y2="290" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Step 8: Answer -->
+  <g filter="url(#shadow)">
+    <rect x="555" y="240" width="140" height="100" rx="10" fill="#fff" stroke="#10b981" stroke-width="2"/>
+  </g>
+  <text x="625" y="275" text-anchor="middle" font-size="28">&#x2705;</text>
+  <text x="625" y="300" text-anchor="middle" font-size="13" font-weight="600" fill="#047857">완성된 답변</text>
+  <text x="625" y="318" text-anchor="middle" font-size="10" fill="#64748b">출처 인용 포함</text>
+  <text x="625" y="331" text-anchor="middle" font-size="10" fill="#64748b">사용자에게 전달</text>
+
+  <!-- Highlight box -->
+  <rect x="720" y="100" width="160" height="220" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="800" y="130" text-anchor="middle" font-size="12" font-weight="700" fill="#92400e">GEO 최적화 포인트</text>
+  <text x="800" y="155" text-anchor="middle" font-size="10" fill="#78350f">&#x2714; 명확한 제목 위계</text>
+  <text x="800" y="175" text-anchor="middle" font-size="10" fill="#78350f">&#x2714; 충실한 Alt-text</text>
+  <text x="800" y="195" text-anchor="middle" font-size="10" fill="#78350f">&#x2714; 고유번호 참조</text>
+  <text x="800" y="215" text-anchor="middle" font-size="10" fill="#78350f">&#x2714; 플랫한 표 구조</text>
+  <text x="800" y="235" text-anchor="middle" font-size="10" fill="#78350f">&#x2714; 핵심 답변 전면 배치</text>
+  <text x="800" y="260" text-anchor="middle" font-size="10" fill="#92400e">= 청킹 후에도</text>
+  <text x="800" y="278" text-anchor="middle" font-size="10" fill="#92400e">조각의 문맥이 유지됨</text>
+  <text x="800" y="296" text-anchor="middle" font-size="10" fill="#92400e">= AI 인용 확률 상승</text>
+
+  <!-- Caption -->
+  <text x="450" y="400" text-anchor="middle" font-size="11" fill="#64748b">RAG(Retrieval-Augmented Generation) 기반 AI 검색의 전체 처리 흐름.</text>
+  <text x="450" y="415" text-anchor="middle" font-size="11" fill="#64748b">문서 작성 단계에서 GEO를 적용하면, 청킹 이후에도 각 조각이 독립적인 문맥을 유지합니다.</text>
+
+  <!-- Arrowhead markers -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+  </defs>
+</svg>

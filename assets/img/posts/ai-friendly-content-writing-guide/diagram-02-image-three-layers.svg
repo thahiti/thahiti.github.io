@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 480" font-family="'Pretendard', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc"/>
+      <stop offset="100%" style="stop-color:#eef2f7"/>
+    </linearGradient>
+    <filter id="sh2" x="-3%" y="-3%" width="106%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <rect width="860" height="480" fill="url(#bg2)" rx="12"/>
+
+  <!-- Title -->
+  <text x="430" y="36" text-anchor="middle" font-size="17" font-weight="700" fill="#1e293b">이미지 설명의 3가지 층위: Alt-text, Caption, In-text Reference</text>
+
+  <!-- Central Image Box -->
+  <g filter="url(#sh2)">
+    <rect x="310" y="60" width="240" height="160" rx="12" fill="#fff" stroke="#e2e8f0" stroke-width="2"/>
+  </g>
+  <rect x="325" y="75" width="210" height="110" rx="6" fill="#f1f5f9"/>
+  <text x="430" y="120" text-anchor="middle" font-size="36">&#x1F4CA;</text>
+  <text x="430" y="150" text-anchor="middle" font-size="11" fill="#64748b">[이미지 영역]</text>
+  <text x="430" y="165" text-anchor="middle" font-size="10" fill="#94a3b8">예: 매출 추이 그래프</text>
+  <text x="430" y="205" text-anchor="middle" font-size="10" fill="#94a3b8" font-style="italic">&#60;img src="chart.png" alt="..."&#62;</text>
+
+  <!-- Layer 1: Alt-text (left) -->
+  <g filter="url(#sh2)">
+    <rect x="30" y="90" width="250" height="120" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  </g>
+  <rect x="38" y="96" width="80" height="22" rx="4" fill="#3b82f6"/>
+  <text x="78" y="111" text-anchor="middle" font-size="11" font-weight="600" fill="#fff">Layer 1</text>
+  <text x="145" y="111" font-size="13" font-weight="700" fill="#1e40af">Alt-text (대체 텍스트)</text>
+  <text x="46" y="134" font-size="11" fill="#334155">&#x1F4CC; 역할: 유형 + 핵심 데이터 식별</text>
+  <text x="46" y="152" font-size="11" fill="#334155">&#x1F441; 대상: 기계(AI), 스크린 리더</text>
+  <text x="46" y="170" font-size="11" fill="#334155">&#x1F4CF; 기준: 125자 내외, 사실 수준까지</text>
+  <text x="46" y="188" font-size="10" fill="#64748b">&#x1F6AB; HTML 속성으로 사람 눈에 보이지 않음</text>
+
+  <!-- Connecting line: Alt-text to Image -->
+  <line x1="280" y1="140" x2="310" y2="140" stroke="#3b82f6" stroke-width="2" stroke-dasharray="5,3"/>
+
+  <!-- Layer 2: Caption (bottom) -->
+  <g filter="url(#sh2)">
+    <rect x="230" y="260" width="400" height="120" rx="10" fill="#faf5ff" stroke="#8b5cf6" stroke-width="2"/>
+  </g>
+  <rect x="238" y="266" width="80" height="22" rx="4" fill="#8b5cf6"/>
+  <text x="278" y="281" text-anchor="middle" font-size="11" font-weight="600" fill="#fff">Layer 2</text>
+  <text x="395" y="281" font-size="13" font-weight="700" fill="#6d28d9">Caption (캡션)</text>
+  <text x="246" y="304" font-size="11" fill="#334155">&#x1F4CC; 역할: 데이터의 의미, 시사점, 본문 연결</text>
+  <text x="246" y="322" font-size="11" fill="#334155">&#x1F441; 대상: 사람 + AI 모두 읽음</text>
+  <text x="246" y="340" font-size="11" fill="#334155">&#x1F4CF; 기준: Alt-text와 중복 금지, 해석/결론 포함</text>
+  <text x="246" y="358" font-size="10" fill="#64748b">&#x1F517; 시각 데이터와 본문 텍스트를 잇는 의미적 브릿지</text>
+
+  <!-- Connecting line: Caption to Image -->
+  <line x1="430" y1="220" x2="430" y2="260" stroke="#8b5cf6" stroke-width="2" stroke-dasharray="5,3"/>
+
+  <!-- Layer 3: In-text Reference (right) -->
+  <g filter="url(#sh2)">
+    <rect x="580" y="90" width="250" height="120" rx="10" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
+  </g>
+  <rect x="588" y="96" width="80" height="22" rx="4" fill="#10b981"/>
+  <text x="628" y="111" text-anchor="middle" font-size="11" font-weight="600" fill="#fff">Layer 3</text>
+  <text x="715" y="111" font-size="13" font-weight="700" fill="#047857">In-text Reference</text>
+  <text x="596" y="134" font-size="11" fill="#334155">&#x1F4CC; 역할: 본문에서 이미지를 명시적 인용</text>
+  <text x="596" y="152" font-size="11" fill="#334155">&#x2714; 권장: "그림 1에서 보듯이, ..."</text>
+  <text x="596" y="170" font-size="11" fill="#334155">&#x274C; 지양: "아래 그림에서 보듯이"</text>
+  <text x="596" y="188" font-size="10" fill="#64748b">&#x1F517; 청킹 후에도 참조 추적이 가능해짐</text>
+
+  <!-- Connecting line: In-text to Image -->
+  <line x1="550" y1="140" x2="580" y2="140" stroke="#10b981" stroke-width="2" stroke-dasharray="5,3"/>
+
+  <!-- Bottom summary -->
+  <g filter="url(#sh2)">
+    <rect x="110" y="410" width="640" height="50" rx="8" fill="#fff8e1" stroke="#f59e0b" stroke-width="1.5"/>
+  </g>
+  <text x="430" y="435" text-anchor="middle" font-size="12" font-weight="600" fill="#92400e">&#x1F4A1; 세 층위를 모두 작성하면, 이미지가 텍스트와 분리되어도 AI가 시각 정보를 놓치지 않습니다.</text>
+  <text x="430" y="452" text-anchor="middle" font-size="11" fill="#a16207">각 층위는 서로 다른 역할을 하므로 동일한 내용을 복사하지 마세요.</text>
+</svg>
