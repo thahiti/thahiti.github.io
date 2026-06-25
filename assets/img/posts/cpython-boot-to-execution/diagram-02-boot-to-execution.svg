@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="660" viewBox="0 0 900 660" font-family="'Pretendard', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <defs>
+    <linearGradient id="bgf" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc"/>
+      <stop offset="100%" style="stop-color:#eef2f7"/>
+    </linearGradient>
+    <filter id="shadowf" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+    <marker id="arrowf" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="660" fill="url(#bgf)" rx="12"/>
+
+  <text x="450" y="40" text-anchor="middle" font-size="17" font-weight="700" fill="#1e293b">python app.py — 부팅부터 실행까지 전체 흐름</text>
+
+  <!-- Stage 1 -->
+  <g filter="url(#shadowf)">
+    <rect x="200" y="64" width="500" height="56" rx="10" fill="#fff" stroke="#3b82f6" stroke-width="2"/>
+  </g>
+  <text x="450" y="89" text-anchor="middle" font-size="13" font-weight="600" fill="#1e40af">python app.py 실행</text>
+  <text x="450" y="108" text-anchor="middle" font-size="10.5" fill="#64748b">OS가 python 바이너리를 exec &#x2192; main() &#x2192; Py_RunMain</text>
+  <line x1="450" y1="120" x2="450" y2="144" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowf)"/>
+
+  <!-- Stage 2 -->
+  <g filter="url(#shadowf)">
+    <rect x="200" y="146" width="500" height="56" rx="10" fill="#fff" stroke="#6366f1" stroke-width="2"/>
+  </g>
+  <text x="450" y="171" text-anchor="middle" font-size="13" font-weight="600" fill="#4338ca">런타임 초기화 (core init &#x2192; main init)</text>
+  <text x="450" y="190" text-anchor="middle" font-size="10.5" fill="#64748b">상태 객체 3계층 &#xB7; 빌트인 타입 &#xB7; sys.path &#xB7; site-packages 확정</text>
+  <line x1="450" y1="202" x2="450" y2="226" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowf)"/>
+
+  <!-- Stage 3 -->
+  <g filter="url(#shadowf)">
+    <rect x="200" y="228" width="500" height="56" rx="10" fill="#fff" stroke="#8b5cf6" stroke-width="2"/>
+  </g>
+  <text x="450" y="253" text-anchor="middle" font-size="13" font-weight="600" fill="#6d28d9">__main__ 모듈 객체와 __dict__ 준비</text>
+  <text x="450" y="272" text-anchor="middle" font-size="10.5" fill="#64748b">__name__='__main__', __file__, __builtins__ 세팅</text>
+  <line x1="450" y1="284" x2="450" y2="308" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowf)"/>
+
+  <!-- Stage 4 -->
+  <g filter="url(#shadowf)">
+    <rect x="200" y="310" width="500" height="56" rx="10" fill="#fff" stroke="#14b8a6" stroke-width="2"/>
+  </g>
+  <text x="450" y="335" text-anchor="middle" font-size="13" font-weight="600" fill="#0f766e">컴파일 파이프라인</text>
+  <text x="450" y="354" text-anchor="middle" font-size="10.5" fill="#64748b">tokenize &#x2192; parse &#x2192; symtable &#x2192; compile&#x2003;&#x21D2;&#x2003;모듈용 code 객체</text>
+  <line x1="450" y1="366" x2="450" y2="390" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowf)"/>
+
+  <!-- Stage 5 -->
+  <g filter="url(#shadowf)">
+    <rect x="200" y="392" width="500" height="56" rx="10" fill="#fff" stroke="#f59e0b" stroke-width="2"/>
+  </g>
+  <text x="450" y="417" text-anchor="middle" font-size="13" font-weight="600" fill="#b45309">frame 생성</text>
+  <text x="450" y="436" text-anchor="middle" font-size="10.5" fill="#64748b">f_globals = f_locals = __main__.__dict__,&#x2003;f_builtins = builtins</text>
+  <line x1="450" y1="448" x2="450" y2="472" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowf)"/>
+
+  <!-- Stage 6 -->
+  <g filter="url(#shadowf)">
+    <rect x="200" y="474" width="500" height="56" rx="10" fill="#fff" stroke="#ef4444" stroke-width="2"/>
+  </g>
+  <text x="450" y="499" text-anchor="middle" font-size="13" font-weight="600" fill="#b91c1c">eval 루프 (stack machine)</text>
+  <text x="450" y="518" text-anchor="middle" font-size="10.5" fill="#64748b">바이트코드를 한 opcode씩 실행 &#x2014; STORE_NAME이 __dict__에 기록</text>
+  <line x1="450" y1="530" x2="450" y2="554" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowf)"/>
+
+  <!-- Stage 7 -->
+  <g filter="url(#shadowf)">
+    <rect x="200" y="556" width="500" height="56" rx="10" fill="#fff" stroke="#64748b" stroke-width="2"/>
+  </g>
+  <text x="450" y="581" text-anchor="middle" font-size="13" font-weight="600" fill="#334155">Py_FinalizeEx</text>
+  <text x="450" y="600" text-anchor="middle" font-size="10.5" fill="#64748b">atexit &#xB7; GC 정리 후 종료</text>
+</svg>
